@@ -1,0 +1,7 @@
+merge_protections:
+  - name: Force ticket association
+    description: Make sure PR has a ticket associated
+    if:
+      - merge-commit-sha < main
+    success_conditions:
+      - body ~= Fixes
